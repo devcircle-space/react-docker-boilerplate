@@ -1,0 +1,21 @@
+version: "3"
+services:
+    react-app:
+        container_name: react-app
+        environment:
+            - NODE_ENV=development
+            - CHOKIDAR_USEPOLLING=true
+        build:
+            context: .
+            dockerfile: Dockerfile
+        expose:
+            - "3000/tcp"
+            - "3001/tcp"
+            - "3002/tcp"
+        ports:
+            - "3002:3000/tcp"
+        command: npm start
+        volumes:
+            - ".:/usr/app"
+            - "/usr/app/node_modules"
+        stdin_open: true
