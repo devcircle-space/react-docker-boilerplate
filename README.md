@@ -4,6 +4,10 @@
 
 Make changes in your React code and Docker will automatically pick the changes, enabled using Docker volumes.
 
+## Stack
+- React + TS
+- Docker
+
 ## Getting Started
 
 - Clone the project or download the zipped folder.
